@@ -111,7 +111,7 @@ chrome.runtime.onMessage.addListener((message, sender) => {
       return;
     }
 
-    if (message.mode === "auto" && autoSaveTabs.has(tabId)) {
+    if (message.mode === "auto") {
       downloadText(latestByTab.get(tabId));
     }
   }
