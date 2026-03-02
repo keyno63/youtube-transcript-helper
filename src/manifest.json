@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Transcript Helper",
+  "version": "1.0.0",
+  "description": "Copy and save YouTube transcripts (manual panel open required).",
+  "permissions": [
+    "contextMenus",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/watch*"
+      ],
+      "js": [
+        "contentScript.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
