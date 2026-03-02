@@ -20,7 +20,7 @@ function buildFilename(title) {
 }
 
 async function downloadText({ title, text }) {
-  const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+  const blob = new Blob([text], { type: "text/csv;charset=utf-8" });
   const dataUrl = await new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.onload = () => resolve(reader.result);
