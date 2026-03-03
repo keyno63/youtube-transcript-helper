@@ -5,7 +5,8 @@
   "description": "Copy and save YouTube transcripts (manual panel open required).",
   "permissions": [
     "contextMenus",
-    "downloads"
+    "downloads",
+    "storage"
   ],
   "host_permissions": [
     "https://www.youtube.com/*"
@@ -13,6 +14,7 @@
   "background": {
     "service_worker": "background.js"
   },
+  "options_page": "options.html",
   "content_scripts": [
     {
       "matches": [
