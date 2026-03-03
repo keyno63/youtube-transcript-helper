@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YouTube Transcript Helper Options</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="panel">
+      <h1>Transcript Helper Options</h1>
+      <p class="subtitle">Configure how top words are calculated.</p>
+
+      <label class="field" for="topWordsLimit">
+        <span>Top words count</span>
+        <input id="topWordsLimit" type="number" min="1" max="200" step="1" />
+      </label>
+
+      <div id="status" class="status" aria-live="polite"></div>
+    </main>
+
+    <script src="options.js"></script>
+  </body>
+</html>
